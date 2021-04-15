@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json.Linq;
 using PowerAppsFunction.Entities;
 using PowerAppsFunction.HttpHelpers;
 using PowerAppsFunction.ValueObject;
@@ -67,7 +66,6 @@ namespace PowerAppsFunction {
                 data = dataUri.ToString()
             };
 
-            log.LogInformation("MergeImages function ran successfully.");
             return new JsonResult(resultJson);
 
         }
