@@ -81,14 +81,7 @@ namespace PowerAppsFunction {
         /// <returns></returns>
         public static Bitmap MergeTwoImages(Bitmap fg, Bitmap bg, bool cropToolbar = false) {
 
-            Bitmap bitmapBase = new Bitmap(bg.Width, bg.Height);
-
-            //ƒrƒbƒgƒ}ƒbƒv‚É”wŒi‰æ‘œ‚ğ•`‰æ
-            using (var g = Graphics.FromImage(bitmapBase)) {
-                //“§‰ß”wŒi‚Ìê‡‚É‘Î‰‚µ‚Äˆê’U”’”wŒi‚É
-                g.FillRectangle(Brushes.White, g.VisibleClipBounds);
-                g.DrawImage(bg, g.VisibleClipBounds);
-            }
+            var bitmapBase = new Bitmap(bg);
 
             //ƒc[ƒ‹ƒo[‚Ì60px‚ğØ‚è”²‚«
             Bitmap fgBitmap;

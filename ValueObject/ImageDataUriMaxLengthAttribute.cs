@@ -13,10 +13,13 @@ namespace PowerAppsFunction.ValueObject {
 
         public ImageDataUriMaxLengthAttribute(int maxByteCount) {
 
-            if(maxByteCount * 1.33 > int.MaxValue) {
+            //指定バイト数を1.33倍してbase64の長さに変換
+            double base64length = maxByteCount * (4 / 3);
+
+            if (base64length > int.MaxValue) {
                 MaxBase64Length = int.MaxValue;
             }else{
-                MaxBase64Length = (int)(maxByteCount * 1.33);
+                MaxBase64Length = (int)(base64length);
             }
 
             base.ErrorMessage = "パラメータ：{0}が制限サイズを超えています。";
@@ -27,7 +30,7 @@ namespace PowerAppsFunction.ValueObject {
 
             ImageDataUri dataUri = value as ImageDataUri;
             if (dataUri == null) {
-                return new ValidationResult("バリデーションルールが正しく設定されていません。");
+                return new ValidationResult($"バリデーションルールが正しく設定されていません。");
             }
 
             //サイズ確認
