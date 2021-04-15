@@ -7,11 +7,11 @@ namespace PowerAppsFunction.Entities {
     class NurieImageEntity {
 
         /// <summary>
-        /// 
+        /// NurieImageを格納するEntity
         /// </summary>
-        /// <param name="image_fg_datauri"></param>
-        /// <param name="image_bg_datauri"></param>
-        /// <param name="image_fg_crop"></param>
+        /// <param name="image_fg_datauri">前景画像のdatauriをテキストで指定します。</param>
+        /// <param name="image_bg_datauri">背景画像のdatauriをテキストで指定します。</param>
+        /// <param name="image_fg_crop">前景画像(ペン入力)のツールバーをクロップするかどうかを指定します。</param>
         /// <exception cref="ArgumentException"></exception>
         [JsonConstructor]
         public NurieImageEntity(string image_fg_datauri, string image_bg_datauri, string image_fg_crop) {

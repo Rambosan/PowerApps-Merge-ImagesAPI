@@ -8,16 +8,19 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 namespace PowerAppsFunction.ValueObject {
+    /// <summary>
+    /// image型のDataUriを扱うクラスです。
+    /// </summary>
     class ImageDataUri {
 
         public ImageFormat ImageFormat { get; }
         public string Base64 { get; }
 
         /// <summary>
-        /// コンストラクタ
+        /// DataUriを指定してDataUriオブジェクトを生成します。
         /// </summary>
         /// <param name="dataUri"></param>
-        /// <exception cref="FormatException"></exception>
+        /// <exception cref="FormatException">テキストがimage型のDataUriにマッチしない場合に例外を返します。</exception>
         public ImageDataUri(string dataUri) {
 
             if (string.IsNullOrWhiteSpace(dataUri)) {
