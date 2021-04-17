@@ -3,9 +3,10 @@
 HTTP Trigger Functions for Microsodt PowerApps / Automate.
 
 # MergeImages
-
 Merge two image to one image as data uri.<br>
-The two image is like a "image from camera control or image control" and "pen input contorol".
+The two image is like a "image from camera control or image control" and "pen input contorol".<br>
+Using the function, you can make apps like draw on your image with powerapps.<br>
+PowerApps→PowerAutomate→Call functionsAPI→Response to PowerApps
 
 <image src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/293667/a02af594-b55e-a478-4b7d-4c54122887e1.gif" width="400px">
 
