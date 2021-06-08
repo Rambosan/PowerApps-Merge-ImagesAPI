@@ -9,7 +9,8 @@ if you use the function, you can make apps like draw on photo or image with powe
 
 PowerApps→PowerAutomate→Call functionsAPI→Response to PowerApps
 
-exsample
+for exsample, Coloring book App.
+
 <image src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/293667/a02af594-b55e-a478-4b7d-4c54122887e1.gif" width="400px">
 
 ### Request
