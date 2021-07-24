@@ -1,6 +1,6 @@
 # Merging a Photo Image and Pen Input Image in Power Apps
 
-this HTTP Trigger Functions can allow it!
+this HTTP Trigger Functions allows you to merging two image in Power Apps
 
 # MergeImages
 Merge two image and return one image as data uri.<br>
